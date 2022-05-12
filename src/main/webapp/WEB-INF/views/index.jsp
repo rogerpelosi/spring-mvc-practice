@@ -43,8 +43,6 @@
 				</td>
 				<td>${dog.size}</td>
 				<td>
-					<a href="edit/${dog.id}">Edit ${dog.name}'s details</a>
-					<br>
 					<a href="delete/${dog.id}">Delete ${dog.name} from your rotation</a>
 				</td>
 			</tr>
