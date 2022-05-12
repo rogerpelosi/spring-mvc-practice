@@ -17,6 +17,11 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Doggy App</title>
+<style>
+	table.tb { border-collapse: collapse; width:300px; }
+	.tb th, .tb td { padding: 5px; border: solid 1px #777; }
+	.tb th { background-color: lightblue;}
+</style>
 </head>
 <body>
 
@@ -24,7 +29,7 @@
 	<a href="new">sign your dog up here</a>
 	
 	<h2>Current Doggy Rotation</h2>
-	<table border="1">
+	<table border="1" class="tb">
 	
 		<tr>
 			<th>ID</th>
