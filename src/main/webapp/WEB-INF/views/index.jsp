@@ -38,9 +38,15 @@
 			<tr>
 				<td>${dog.id}</td>
 				<td>${dog.breed}</td>
-				<td>${dog.name}</td>
+				<td>
+					<a href="result/${dog.id}">${dog.name}</a>
+				</td>
 				<td>${dog.size}</td>
-				<td><a href="delete/${dog.id}">Delete ${dog.name} from your rotation</a></td>
+				<td>
+					<a href="edit/${dog.id}">Edit ${dog.name}'s details</a>
+					<br>
+					<a href="delete/${dog.id}">Delete ${dog.name} from your rotation</a>
+				</td>
 			</tr>
 		</c:forEach>
 		

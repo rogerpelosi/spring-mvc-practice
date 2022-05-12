@@ -18,6 +18,14 @@ public class DogService {
 		return doggyRepo.getAllDogs();
 	}
 	
+	public Dog getDogById(int dogId) {
+		Dog doggy = doggyRepo.getDogById(dogId);
+		if(doggy == null) {
+			return new Dog(0, "N/A", "Doesn't Exist", "N/A");
+		}
+		return doggy;
+	}
+	
 	public void addDog(Dog newDog) {
 		doggyRepo.addDog(newDog);
 	}

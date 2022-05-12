@@ -27,20 +27,28 @@ public class DogAppController {
 		return "index";
 	}
 	
-	@RequestMapping(value="/new", method = RequestMethod.GET)
+	@RequestMapping(value = "/result/{dogId}", method = RequestMethod.GET)
+	public String getFindHandler(@PathVariable("dogId") int dogId, Model model) {
+		System.out.println("Find Handler Invoked");
+		Dog dog = doggyService.getDogById(dogId);
+		model.addAttribute("dog", dog);
+		return "result";
+	}
+	
+	@RequestMapping(value ="/new", method = RequestMethod.GET)
 	public String getNewHandler() {
 		System.out.println("New Handler Invoked");
 		return "new";
 	}
 	
-	@RequestMapping(value= "/add", method = RequestMethod.POST)
+	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public String getAddHandler(@ModelAttribute("dog") Dog dog) {
 		System.out.println(dog);
 		doggyService.addDog(dog);
 		return "redirect:/";
 	}
 	
-	@RequestMapping(value="/delete/{dogId}", method = RequestMethod.GET)
+	@RequestMapping(value = "/delete/{dogId}", method = RequestMethod.GET)
 	public String getDeleteHandler(@PathVariable("dogId") int dogId) {
 		System.out.println("Delete Handler Invoked");
 		doggyService.removeDog(dogId);

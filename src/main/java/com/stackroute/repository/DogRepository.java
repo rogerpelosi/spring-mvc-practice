@@ -28,6 +28,16 @@ public class DogRepository {
 		return dogs;
 	}
 	
+	public Dog getDogById(int dogId) {
+		Dog doggy = null;
+		for(Dog indDog: dogs) {
+			if(indDog.getId() == dogId) {
+				doggy = indDog;
+			}
+		}
+		return doggy;
+	}
+	
 	public void addDog(Dog newDog) {
 		dogs.add(newDog);
 	}
