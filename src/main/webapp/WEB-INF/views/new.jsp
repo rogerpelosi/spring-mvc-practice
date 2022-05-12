@@ -27,6 +27,7 @@
 		<input name="size" placeholder="enter size (s/m/l)" class="form-control"/>
 		<br>
 		
+		<input type=button value="Back to Rotation" onCLick="history.back()" class="btn btn-primary">
 		<button type="submit" class="btn btn-primary">Sign Up!</button>
 	</form>
 
